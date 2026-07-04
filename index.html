@@ -1,150 +1,317 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ñ press</title>
-    <meta name="description" content="ñ press is a community print studio based in East Boston.">
+    <meta name="description" content="ñ press es un taller comunitario de impresión en East Boston.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="site-shell">
-      <aside class="studio-panel" aria-label="Studio information">
-        <a class="logo" href="#" aria-label="ñ press home">ñ</a>
-        <div class="studio-copy">
-          <h1>ñ press</h1>
-          <p>Community print studio based in East Boston.</p>
-          <nav class="studio-links" aria-label="Studio links">
-            <a href="mailto:hello@npress.studio">email</a>
-            <a href="#">instagram</a>
-            <a href="#">visit</a>
-          </nav>
+    <main class="site">
+      <input class="page-switch" type="radio" name="page" id="page-home" checked>
+      <input class="page-switch" type="radio" name="page" id="page-studios">
+      <input class="page-switch" type="radio" name="page" id="page-events">
+      <input class="page-switch" type="radio" name="page" id="page-projects">
+      <input class="page-switch" type="radio" name="page" id="page-about">
+      <input class="lang-switch" type="radio" name="language" id="lang-es" checked>
+      <input class="lang-switch" type="radio" name="language" id="lang-en">
+
+      <section class="media-shell" aria-label="Imágenes">
+        <div class="media-stack">
+          <div class="media-page home-media">
+            <figure class="media-block hero-block">
+              <figcaption>
+                <span class="es">Pie de foto de imagen</span>
+                <span class="en">Placeholder image caption</span>
+              </figcaption>
+              <div class="placeholder">
+                <span class="es">Imagen provisional</span>
+                <span class="en">Placeholder image</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">Pie de foto de imagen</span>
+                <span class="en">Placeholder image caption</span>
+              </figcaption>
+              <div class="placeholder short-placeholder">
+                <span class="es">Nueva gráfica provisional</span>
+                <span class="en">New graphic placeholder</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">Pie de foto de imagen</span>
+                <span class="en">Placeholder image caption</span>
+              </figcaption>
+              <div class="placeholder square-placeholder">
+                <span class="es">Objeto provisional</span>
+                <span class="en">Shop item placeholder</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="media-page studios-media">
+            <figure class="media-block hero-block">
+              <figcaption>
+                <span class="es">Vista del taller</span>
+                <span class="en">Studio room caption</span>
+              </figcaption>
+              <div class="placeholder">
+                <span class="es">Taller provisional</span>
+                <span class="en">Studio room placeholder</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">Herramientas compartidas</span>
+                <span class="en">Shared tools caption</span>
+              </figcaption>
+              <div class="placeholder square-placeholder">
+                <span class="es">Herramientas provisionales</span>
+                <span class="en">Tools placeholder</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="media-page events-media">
+            <figure class="media-block hero-block">
+              <figcaption>
+                <span class="es">Volante de taller</span>
+                <span class="en">Workshop flyer caption</span>
+              </figcaption>
+              <div class="placeholder">
+                <span class="es">Volante provisional</span>
+                <span class="en">Workshop flyer placeholder</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">Mesa abierta</span>
+                <span class="en">Open studio table</span>
+              </figcaption>
+              <div class="placeholder short-placeholder">
+                <span class="es">Evento provisional</span>
+                <span class="en">Event placeholder</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="media-page projects-media">
+            <figure class="media-block hero-block">
+              <figcaption>
+                <span class="es">Carteles comunitarios</span>
+                <span class="en">Community Posters</span>
+              </figcaption>
+              <div class="placeholder">
+                <span class="es">Carteles comunitarios provisionales</span>
+                <span class="en">Community posters placeholder</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">Ediciones pequeñas</span>
+                <span class="en">Small Editions</span>
+              </figcaption>
+              <div class="placeholder square-placeholder">
+                <span class="es">Ediciones provisionales</span>
+                <span class="en">Small editions placeholder</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="media-page about-media">
+            <figure class="media-block hero-block">
+              <figcaption>
+                <span class="es">Archivo de ñ press</span>
+                <span class="en">ñ press archive</span>
+              </figcaption>
+              <div class="placeholder">
+                <span class="es">Archivo provisional</span>
+                <span class="en">Archive placeholder</span>
+              </div>
+            </figure>
+            <figure class="media-block">
+              <figcaption>
+                <span class="es">East Boston</span>
+                <span class="en">East Boston</span>
+              </figcaption>
+              <div class="placeholder short-placeholder">
+                <span class="es">Imagen provisional</span>
+                <span class="en">Placeholder image</span>
+              </div>
+            </figure>
+          </div>
         </div>
-      </aside>
+      </section>
 
-      <section class="projects" aria-label="Projects">
-        <input class="project-switch" type="radio" name="project" id="tab-community" checked>
-        <input class="project-switch" type="radio" name="project" id="tab-workshops">
-        <input class="project-switch" type="radio" name="project" id="tab-editions">
-        <input class="project-switch" type="radio" name="project" id="tab-residency">
-
-        <header class="project-tabs" aria-label="Project tabs">
-          <label for="tab-community">Community Posters</label>
-          <label for="tab-workshops">Open Studio</label>
-          <label for="tab-editions">Small Editions</label>
-          <label for="tab-residency">Resident Work</label>
+      <section class="right-shell" aria-label="Contenido">
+        <header class="right-nav" aria-label="Navegación">
+          <nav class="button-row">
+            <label class="circle-button logo-button" for="page-home" aria-label="ñ press">ñ</label>
+            <label class="circle-button" for="page-studios">
+              <span class="es">Taller</span>
+              <span class="en">Studios</span>
+            </label>
+            <label class="circle-button" for="page-events">
+              <span class="es">Eventos</span>
+              <span class="en">Events</span>
+            </label>
+            <label class="circle-button" for="page-projects">
+              <span class="es">Proyectos</span>
+              <span class="en">Projects</span>
+            </label>
+            <label class="circle-button" for="page-about">
+              <span class="es">Acerca</span>
+              <span class="en">About</span>
+            </label>
+          </nav>
+          <div class="utility-panel">
+            <div class="language">
+              <label for="lang-en">English</label>
+              <span>/</span>
+              <label for="lang-es">Español</label>
+            </div>
+            <a class="instagram" href="https://www.instagram.com/n_press_boston/">INSTAGRAM</a>
+          </div>
         </header>
 
-        <div class="project-stack">
-          <article class="project-panel panel-community">
-            <div class="project-heading">
-              <p>001</p>
-              <h2>Community Posters</h2>
-              <dl>
-                <div>
-                  <dt>Format</dt>
-                  <dd>screenprint, risograph, public workshop</dd>
-                </div>
-                <div>
-                  <dt>Place</dt>
-                  <dd>East Boston</dd>
-                </div>
-                <div>
-                  <dt>Year</dt>
-                  <dd>2026</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="image-scroll">
-              <figure class="placeholder tall"><span>poster wall</span></figure>
-              <figure class="placeholder wide"><span>ink table</span></figure>
-              <figure class="placeholder square"><span>print detail</span></figure>
-              <figure class="placeholder wide"><span>street install</span></figure>
-              <figure class="placeholder tall"><span>workshop stack</span></figure>
-            </div>
-          </article>
+        <div class="copy-stack">
+          <section class="copy-page home-copy" aria-label="Inicio">
+            <article class="copy-block intro-copy">
+              <p>
+                <span class="es">Mitad de texto</span>
+                <span class="en">Text half</span>
+              </p>
+              <p>
+                <span class="es">llenar con texto provisional sobre actualizaciones</span>
+                <span class="en">fill with placeholder text about updates</span>
+              </p>
+              <h1>
+                <span class="es">La página principal debe mezclar información sobre ñ, próximos eventos, nuevas gráficas y cosas para la venta.</span>
+                <span class="en">The homepage should be a mix of information about ñ, immediate upcoming events, new graphics, and things for sale.</span>
+              </h1>
+            </article>
+            <figure class="small-feature">
+              <div class="placeholder">
+                <span class="es">imagen<br>pequeña<br>provisional</span>
+                <span class="en">small<br>Placeholder<br>image</span>
+              </div>
+            </figure>
+            <article class="copy-block update-copy">
+              <p>
+                <span class="es">Próximo taller abierto</span>
+                <span class="en">Upcoming open studio</span>
+              </p>
+              <p>
+                <span class="es">Horas abiertas de impresión, orientación para miembros y una mesa pequeña de nuevas ediciones del archivo comunitario.</span>
+                <span class="en">Saturday printing hours, member orientation, and a small table of new editions from the community archive.</span>
+              </p>
+              <a href="#">
+                <span class="es">[Ver..]</span>
+                <span class="en">[View..]</span>
+              </a>
+            </article>
+          </section>
 
-          <article class="project-panel panel-workshops">
-            <div class="project-heading">
-              <p>002</p>
-              <h2>Open Studio</h2>
-              <dl>
-                <div>
-                  <dt>Format</dt>
-                  <dd>drop-in printing, demos, community archive</dd>
-                </div>
-                <div>
-                  <dt>Place</dt>
-                  <dd>Maverick Square</dd>
-                </div>
-                <div>
-                  <dt>Year</dt>
-                  <dd>2026</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="image-scroll">
-              <figure class="placeholder wide"><span>studio room</span></figure>
-              <figure class="placeholder square"><span>tools</span></figure>
-              <figure class="placeholder tall"><span>drying rack</span></figure>
-              <figure class="placeholder wide"><span>group table</span></figure>
-            </div>
-          </article>
+          <section class="copy-page studios-copy" aria-label="Taller">
+            <article class="copy-block intro-copy">
+              <p>
+                <span class="es">Taller</span>
+                <span class="en">Studios</span>
+              </p>
+              <h1>
+                <span class="es">Espacio comunitario para impresión, publicación, talleres y ediciones pequeñas en East Boston.</span>
+                <span class="en">Community workspace for print, publishing, workshops, and small editions in East Boston.</span>
+              </h1>
+              <p>
+                <span class="es">Información provisional para membresías, horarios, acceso, equipo y maneras de participar.</span>
+                <span class="en">Placeholder information for membership, open hours, access, equipment, and how people can get involved.</span>
+              </p>
+            </article>
+          </section>
 
-          <article class="project-panel panel-editions">
-            <div class="project-heading">
-              <p>003</p>
-              <h2>Small Editions</h2>
-              <dl>
-                <div>
-                  <dt>Format</dt>
-                  <dd>collaborative artist books and printed multiples</dd>
-                </div>
-                <div>
-                  <dt>Place</dt>
-                  <dd>ñ press studio</dd>
-                </div>
-                <div>
-                  <dt>Year</dt>
-                  <dd>2026</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="image-scroll">
-              <figure class="placeholder square"><span>edition cover</span></figure>
-              <figure class="placeholder wide"><span>spread</span></figure>
-              <figure class="placeholder wide"><span>process</span></figure>
-              <figure class="placeholder tall"><span>finished stack</span></figure>
-            </div>
-          </article>
+          <section class="copy-page events-copy" aria-label="Eventos">
+            <article class="copy-block intro-copy">
+              <p>
+                <span class="es">Eventos</span>
+                <span class="en">Events</span>
+              </p>
+              <h1>
+                <span class="es">Talleres, estudios abiertos, charlas, lanzamientos y noches informales de impresión.</span>
+                <span class="en">Workshops, open studios, talks, launches, and casual print nights.</span>
+              </h1>
+              <p>
+                <span class="es">Cada evento puede vivir junto a su volante o documentación en la columna de imágenes.</span>
+                <span class="en">Each event can sit beside its flyer or documentation in the image column.</span>
+              </p>
+            </article>
+          </section>
 
-          <article class="project-panel panel-residency">
-            <div class="project-heading">
-              <p>004</p>
-              <h2>Resident Work</h2>
-              <dl>
-                <div>
-                  <dt>Format</dt>
-                  <dd>artist-led experiments, talks, editions</dd>
-                </div>
-                <div>
-                  <dt>Place</dt>
-                  <dd>East Boston waterfront</dd>
-                </div>
-                <div>
-                  <dt>Year</dt>
-                  <dd>2026</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="image-scroll">
-              <figure class="placeholder tall"><span>studio view</span></figure>
-              <figure class="placeholder wide"><span>test prints</span></figure>
-              <figure class="placeholder square"><span>talk detail</span></figure>
-              <figure class="placeholder wide"><span>installation</span></figure>
-              <figure class="placeholder square"><span>archive</span></figure>
-            </div>
-          </article>
+          <section class="copy-page projects-copy" aria-label="Proyectos">
+            <article class="copy-block project-card">
+              <p>
+                <span class="es">Proyecto 01</span>
+                <span class="en">Project 01</span>
+              </p>
+              <h2>
+                <span class="es">Carteles Comunitarios</span>
+                <span class="en">Community Posters</span>
+              </h2>
+              <p>
+                <span class="es">Serigrafía, risografía, taller público<br>East Boston<br>2026</span>
+                <span class="en">Screenprint, risograph, public workshop<br>East Boston<br>2026</span>
+              </p>
+              <p>
+                <span class="es">Descripción provisional para una página de proyecto, publicación o serie de talleres.</span>
+                <span class="en">Placeholder description for a project page, publication, or workshop series.</span>
+              </p>
+              <a href="#">
+                <span class="es">[Ver..]</span>
+                <span class="en">[View..]</span>
+              </a>
+            </article>
+            <article class="copy-block project-card">
+              <p>
+                <span class="es">Proyecto 02</span>
+                <span class="en">Project 02</span>
+              </p>
+              <h2>
+                <span class="es">Taller Abierto</span>
+                <span class="en">Open Studio</span>
+              </h2>
+              <p>
+                <span class="es">Impresión abierta, demos, archivo comunitario<br>Maverick Square<br>2026</span>
+                <span class="en">Drop-in printing, demos, community archive<br>Maverick Square<br>2026</span>
+              </p>
+              <p>
+                <span class="es">Descripción provisional para un programa continuo del taller.</span>
+                <span class="en">Placeholder description for an ongoing studio program.</span>
+              </p>
+              <a href="#">
+                <span class="es">[Ver..]</span>
+                <span class="en">[View..]</span>
+              </a>
+            </article>
+          </section>
+
+          <section class="copy-page about-copy" aria-label="Acerca">
+            <article class="copy-block intro-copy">
+              <p>
+                <span class="es">Acerca</span>
+                <span class="en">About</span>
+              </p>
+              <h1>
+                <span class="es">ñ press es un taller comunitario de impresión basado en East Boston.</span>
+                <span class="en">ñ press is a community print studio based in East Boston.</span>
+              </h1>
+              <p>
+                <span class="es">Usa esta página para la historia del taller, colaboradores, notas de acceso, contacto y lenguaje bilingüe.</span>
+                <span class="en">Use this page for the studio story, collaborators, access notes, contact information, and bilingual language.</span>
+              </p>
+            </article>
+          </section>
         </div>
       </section>
     </main>
