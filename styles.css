@@ -10,6 +10,15 @@
   --text: #202020;
   --rule: #101010;
   --line: 1px;
+  --pink: #ff00a8;
+  --yellow: #fff200;
+  --orange: #ff5b00;
+  --green: #20ff91;
+  --blue: #061cdb;
+  --cyan: #09d7df;
+  --magenta: #ff00e7;
+  --lime: #80ff00;
+  --red: #ff0b00;
 }
 
 html {
@@ -136,15 +145,16 @@ figure {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  min-height: calc(100cqw / 7);
+  height: calc(100cqw / 7);
   background: var(--paper);
+  border-bottom: var(--line) solid var(--rule);
+  overflow: hidden;
 }
 
 .button-row {
   grid-column: 1 / 6;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  border-bottom: var(--line) solid var(--rule);
 }
 
 .circle-button {
@@ -158,11 +168,42 @@ figure {
   border-right: var(--line) solid var(--rule);
   overflow: hidden;
   color: var(--ink);
+  background: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(6px, 2.4cqw, 21px);
   font-weight: 800;
   text-align: center;
   white-space: nowrap;
+}
+
+label[for="page-home"] {
+  --button-bg: var(--pink);
+  --circle-fill: var(--yellow);
+  --button-text: var(--pink);
+}
+
+label[for="page-studios"] {
+  --button-bg: var(--orange);
+  --circle-fill: var(--green);
+  --button-text: var(--orange);
+}
+
+label[for="page-events"] {
+  --button-bg: var(--yellow);
+  --circle-fill: var(--blue);
+  --button-text: var(--yellow);
+}
+
+label[for="page-projects"] {
+  --button-bg: var(--magenta);
+  --circle-fill: var(--cyan);
+  --button-text: var(--magenta);
+}
+
+label[for="page-about"] {
+  --button-bg: var(--lime);
+  --circle-fill: var(--red);
+  --button-text: var(--lime);
 }
 
 .circle-button:last-child {
@@ -185,7 +226,8 @@ figure {
 #page-events:checked ~ .right-shell label[for="page-events"],
 #page-projects:checked ~ .right-shell label[for="page-projects"],
 #page-about:checked ~ .right-shell label[for="page-about"] {
-  color: var(--paper);
+  color: var(--button-text);
+  background: var(--button-bg);
 }
 
 .circle-button:hover::before,
@@ -195,7 +237,7 @@ figure {
 #page-projects:checked ~ .right-shell label[for="page-projects"]::before,
 #page-about:checked ~ .right-shell label[for="page-about"]::before {
   border-color: var(--rule);
-  background: var(--rule);
+  background: var(--circle-fill);
 }
 
 .logo-button {
@@ -244,10 +286,43 @@ figure {
 }
 
 .instagram {
+  border-bottom: 0;
+  color: var(--ink);
+  background: var(--paper);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(9px, 3.4cqw, 34px);
   font-weight: 900;
   text-decoration: none;
+}
+
+.instagram:hover {
+  color: var(--yellow);
+  background: var(--pink);
+}
+
+#page-home:checked ~ .right-shell .instagram {
+  color: var(--yellow);
+  background: var(--pink);
+}
+
+#page-studios:checked ~ .right-shell .instagram {
+  color: var(--orange);
+  background: var(--green);
+}
+
+#page-events:checked ~ .right-shell .instagram {
+  color: var(--yellow);
+  background: var(--blue);
+}
+
+#page-projects:checked ~ .right-shell .instagram {
+  color: var(--magenta);
+  background: var(--cyan);
+}
+
+#page-about:checked ~ .right-shell .instagram {
+  color: var(--lime);
+  background: var(--red);
 }
 
 .media-block {
@@ -272,12 +347,29 @@ figcaption {
   text-align: center;
 }
 
+.has-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.has-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+
 .short-placeholder {
   min-height: 38vh;
 }
 
 .square-placeholder {
   aspect-ratio: 1;
+  min-height: 0;
+}
+
+.square-placeholder img {
   min-height: 0;
 }
 
@@ -291,25 +383,30 @@ figcaption {
 
 .copy-block {
   padding: 36px 32px;
-  font-size: clamp(20px, 1.45vw, 30px);
+  font-size: clamp(15px, 1.15vw, 25px);
 }
 
 .copy-block p + p,
-.copy-block p + h1,
-.copy-block h1 + p,
 .copy-block h2 + p,
 .copy-block p + a {
   margin-top: 28px;
 }
 
-h1 {
-  max-width: 680px;
-  font-size: clamp(22px, 1.55vw, 32px);
-  font-weight: 400;
+.copy-block p + h2 {
+  margin-top: 28px;
+}
+
+.page-title {
+  padding: 36px 32px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 3.4vw, 76px);
+  font-weight: 900;
+  line-height: 0.9;
 }
 
 h2 {
-  font-size: clamp(30px, 2.6vw, 54px);
+  max-width: 680px;
+  font-size: clamp(18px, 1.35vw, 28px);
   font-weight: 400;
 }
 
@@ -352,7 +449,7 @@ h2 {
 
   .media-shell,
   .right-shell {
-    padding-top: calc(100vw / 6.5);
+    padding-top: calc(100vw / 7);
   }
 
   .media-shell {
@@ -369,31 +466,31 @@ h2 {
     top: 0;
     left: 0;
     width: 100vw;
-    min-height: calc(100vw / 6.5);
+    height: calc(100vw / 7);
     grid-template-columns: repeat(7, minmax(0, 1fr));
     border-right: 0;
   }
 
   .circle-button,
   .utility-panel {
-    height: calc(100vw / 6.5);
+    height: calc(100vw / 7);
   }
 
   .circle-button {
-    font-size: clamp(9px, 2.45vw, 18px);
+    font-size: clamp(10px, 2.65vw, 19px);
   }
 
   .logo-button {
-    font-size: clamp(42px, 11vw, 88px);
+    font-size: clamp(42px, 11.8vw, 90px);
   }
 
   .language {
-    font-size: clamp(9px, 2.45vw, 18px);
+    font-size: clamp(10px, 2.65vw, 19px);
     gap: 0.2em;
   }
 
   .instagram {
-    font-size: clamp(10px, 3vw, 22px);
+    font-size: clamp(12px, 3.25vw, 24px);
   }
 
   figcaption {
@@ -414,20 +511,26 @@ h2 {
 
   .copy-block {
     padding: 18px 12px;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .copy-block p + p,
-  .copy-block p + h1,
-  .copy-block h1 + p,
   .copy-block h2 + p,
   .copy-block p + a {
     margin-top: 18px;
   }
 
-  h1,
+  .copy-block p + h2 {
+    margin-top: 18px;
+  }
+
+  .page-title {
+    padding: 18px 12px 0;
+    font-size: clamp(24px, 7vw, 44px);
+  }
+
   h2 {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .small-feature {
@@ -451,11 +554,14 @@ h2 {
 @media (max-width: 560px) {
   figcaption,
   .copy-block {
-    font-size: 14px;
+    font-size: 11px;
   }
 
-  h1,
+  .page-title {
+    font-size: 24px;
+  }
+
   h2 {
-    font-size: 17px;
+    font-size: 14px;
   }
 }
